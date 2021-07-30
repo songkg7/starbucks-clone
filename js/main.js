@@ -65,7 +65,7 @@ new Swiper(".promotion .swiper-container", {
     clickable: true,
   },
   navigation: {
-    prevElL: ".promotion .swiper-prev",
+    prevEl: ".promotion .swiper-prev",
     nextEl: ".promotion .swiper-next",
   },
 });
