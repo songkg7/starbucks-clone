@@ -213,11 +213,15 @@ header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
-  display: none;
+  max-height: 0px;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden;
 }
 
 header .main-menu .item:hover .item__contents {
   display: block;
+  max-height: 500px;
+  transition: max-height 0.4s ease-in;
 }
 
 header .main-menu .item .item__contents .contents__menu {
