@@ -470,8 +470,7 @@ header .badges .badge {
   margin: auto;
 }
 
-.notice,
-.promotion .swiper-pagination {
+.notice .promotion .swiper-pagination {
   bottom: 40px;
   left: 0;
   right: 0;
