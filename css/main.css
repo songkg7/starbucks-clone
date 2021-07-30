@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  height: 6000px;
 }
 
 img {
@@ -731,4 +732,17 @@ header .badges .badge {
 
 .pick-your-favorite .text-group .description {
   margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.reserve-store .inner {
+  height: 600px;
 }
