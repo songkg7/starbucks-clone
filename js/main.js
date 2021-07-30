@@ -76,9 +76,9 @@ new Swiper(".awards .swiper-container", {
   spaceBetween: 30,
   slidesPerView: 5,
   navigation: {
-    prevEl: '.awards .swiper-prev',
-    nextEl: '.awards .swiper-next'
-  }
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  },
 });
 
 const promotionEl = document.querySelector(".promotion");
@@ -124,3 +124,6 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear();
