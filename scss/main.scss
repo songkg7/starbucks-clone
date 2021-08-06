@@ -88,52 +88,75 @@
 /* VISUAL */
 .visual {
   margin-top: 120px;
-  background-image: url("../images/spring/visual_bg.jpg");
+  background-image: url("../images/summer/2021_summer3_bg.jpeg");
   background-position: center;
   .inner {
     height: 646px;
   }
   .title {
     position: absolute;
-    top: 88px;
-    left: -10px;
-    .btn {
-      position: absolute;
-      top: 259px;
-      left: 173px;
-    }
+    top: 9%;
+    left: 13%;
   }
-  .cup1 {
-    &.image {
-      position: absolute;
-      bottom: 0;
-      right: -47px;
-    }
-    &.text {
-      position: absolute;
-      top: 38px;
-      right: 171px;
-    }
-  }
-  .cup2 {
-    &.image {
-      position: absolute;
-      bottom: 0;
-      right: 162px;
-    }
-    &.text {
-      position: absolute;
-      top: 321px;
-      right: 416px;
-    }
-  }
-  .spoon {
+  .btn {
     position: absolute;
-    bottom: 0;
-    left: 275px;
+    top: 259px;
+    left: 173px;
   }
   .fade-in {
     opacity: 0;
+    .set1 {
+      &.image {
+        position: absolute;
+        bottom: 23%;
+        left: 56.6%;
+        width: 20%;
+        min-width: 208px;
+      }
+      &.text {
+        position: absolute;
+        top: 138px;
+        right: 45%;
+        max-width: 189px;
+      }
+    }
+    .set2 {
+      &.image {
+        position: absolute;
+        bottom: 15.9%;
+        left: 42.8%;
+        width: 18%;
+        z-index: 5;
+        min-width: 185px;
+      }
+      &.text {
+        position: absolute;
+        left: 23%;
+        bottom: 24%;
+      }
+      &.shadow {
+        position: absolute;
+        bottom: 12%;
+        left: 41%;
+        width: 22%;
+        min-width: 249px;
+        display: block;
+      }
+    }
+    .set3 {
+      &.image {
+        position: absolute;
+        bottom: 14.2%;
+        right: 1.7%;
+        width: 19%;
+        min-width: 202px;
+      }
+      &.text {
+        position: absolute;
+        right: 5.5%;
+        top: 14.4%;
+      }
+    }
   }
 }
 
