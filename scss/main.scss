@@ -3,11 +3,11 @@
   height: 42px;
   border: 2px solid #333;
   border-radius: 50%;
+  outline: none;
   position: absolute;
   top: 300px;
   z-index: 1;
   cursor: pointer;
-  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,36 @@
   background-color: $color;
   position: absolute;
   top: 0;
+}
+
+@mixin medal {
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: 1s;
+}
+
+@mixin awards-swiper-arrow {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  position: absolute;
+  color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  &:hover {
+    background-color: #fff;
+    color: #333;
+  }
 }
 
 /* ScrollMagic */
@@ -425,150 +455,102 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.reserve-store .inner {
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.reserve-store .medal {
-  width: 334px;
-  height: 334px;
-  perspective: 600px;
-}
-
-.reserve-store .medal .front,
-.reserve-store .medal .back {
-  width: 334px;
-  height: 334px;
-  backface-visibility: hidden;
-  position: absolute;
-  transition: 1s;
-}
-
-.reserve-store .medal .front {
-  transform: rotateY(0deg);
-}
-
-.reserve-store .medal:hover .front {
-  transform: rotateY(180deg);
-}
-
-.reserve-store .medal .back {
-  transform: rotateY(-180deg);
-}
-
-.reserve-store .medal:hover .back {
-  transform: rotateY(0deg);
-}
-
-.reserve-store .medal .back .btn {
-  position: absolute;
-  top: 240px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  .inner {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .medal {
+    width: 334px;
+    height: 334px;
+    perspective: 600px;
+    .front {
+      @include medal;
+      transform: rotateY(0deg);
+    }
+    .back {
+      @include medal;
+      transform: rotateY(-180deg);
+      .btn {
+        position: absolute;
+        top: 240px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &:hover {
+      .front {
+        transform: rotateY(180deg);
+      }
+      .back {
+        transform: rotateY(0deg);
+      }
+    }
+  }
 }
 
 /* FIND STORE */
 .find-store {
   background-image: url("../images/find_store_bg.jpg");
-}
-
-.find-store .inner {
-  height: 400px;
-}
-
-.find-store .texture1 {
-  position: absolute;
-  top: 0;
-  left: 400px;
-}
-
-.find-store .texture2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.find-store .picture {
-  position: absolute;
-  border-radius: 50%;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.find-store .picture1 {
-  top: -60px;
-  left: 0;
-}
-
-.find-store .picture2 {
-  top: 150px;
-  left: 250px;
-}
-
-.find-store .text-group {
-  position: absolute;
-  top: 120px;
-  left: 550px;
-}
-
-.find-store .text-group .title {
-  margin-bottom: 20px;
-}
-
-.find-store .text-group .description {
-  margin-bottom: 20px;
+  .inner {
+    height: 400px;
+  }
+  .texture1 {
+    position: absolute;
+    top: 0;
+    left: 400px;
+  }
+  .texture2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .picture {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  .picture1 {
+    top: -60px;
+    left: 0;
+  }
+  .picture2 {
+    top: 150px;
+    left: 250px;
+  }
+  .text-group {
+    position: absolute;
+    top: 120px;
+    left: 550px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 /* AWARDS */
 .awards {
   background-color: #272727;
-}
-
-.awards .inner {
-  padding: 40px 0;
-}
-
-.awards .swiper-container {
-  width: 100%;
-  height: 40px;
-}
-
-.awards .swiper-prev,
-.awards .swiper-next {
-  width: 42px;
-  height: 42px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  outline: none;
-  color: #fff;
-  opacity: 0.3;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.awards .swiper-prev {
-  left: -100px;
-}
-
-.awards .swiper-next {
-  right: -100px;
-}
-
-.awards .swiper-prev:hover,
-.awards .swiper-next:hover {
-  background-color: #fff;
-  color: #333;
+  .inner {
+    padding: 40px 0;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 40px;
+  }
+  .swiper-prev {
+    @include awards-swiper-arrow;
+    left: -100px;
+  }
+  .swiper-next {
+    @include awards-swiper-arrow;
+    right: -100px;
+  }
 }
 
 #to-top {
