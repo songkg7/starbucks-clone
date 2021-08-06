@@ -56,7 +56,7 @@ new Swiper(".promotion .swiper-container", {
   centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 1500,
   },
   pagination: {
     el: ".promotion .swiper-pagination", // 페이지 번호 요소 선택자
