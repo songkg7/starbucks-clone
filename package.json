@@ -1,0 +1,29 @@
+{
+  "name": "starbucks",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/196c6809-af0f-4f37-b419-056af2a5389b/deploy-status)](https://app.netlify.com/sites/happy-pike-856a4b/deploys)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songkg7/starbucks-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songkg7/starbucks-clone/issues"
+  },
+  "homepage": "https://github.com/songkg7/starbucks-clone#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "sass": "^1.37.5"
+  },
+  "staticFiles": {
+    "staticPath": "static"
+  }
+}
