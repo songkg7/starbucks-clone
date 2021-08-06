@@ -25,5 +25,8 @@
   },
   "staticFiles": {
     "staticPath": "static"
+  },
+  "dependencies": {
+    "youtube-iframe": "^1.0.3"
   }
 }
