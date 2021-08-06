@@ -81,6 +81,7 @@ new Swiper(".awards .swiper-container", {
 
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
+const btnIcon = promotionToggleBtn.querySelector(".material-icons");
 
 let isHidePromotion = false;
 promotionToggleBtn.addEventListener("click", function () {
@@ -88,9 +89,11 @@ promotionToggleBtn.addEventListener("click", function () {
   if (isHidePromotion) {
     // hide
     promotionEl.classList.add("hide");
+    btnIcon.textContent = "arrow_circle_down";
   } else {
     // show
     promotionEl.classList.remove("hide");
+    btnIcon.textContent = "arrow_circle_up";
   }
 });
 
