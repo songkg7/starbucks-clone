@@ -1,3 +1,10 @@
+// ROOT
+$summer-blue: #005481;
+$white: #fff;
+$brown: #592b18;
+$gold: #d9aa8a;
+$black: #333;
+
 /* COMMON */
 body {
   color: #333;
@@ -22,6 +29,24 @@ a {
 }
 
 /* button */
+@mixin btn($color1, $color2) {
+  color: $color1;
+  border-color: $color1;
+  &:hover {
+    color: $color2;
+    background-color: $color1;
+  }
+}
+
+@mixin btn--reverse($color1, $color2) {
+  background-color: $color2;
+  color: $color1;
+  &:hover {
+    background-color: transparent;
+    color: $color2;
+  }
+}
+
 .btn {
   width: 130px;
   padding: 10px;
@@ -48,28 +73,16 @@ a {
     }
   }
   &.btn--brown {
-    color: #592b18;
-    border-color: #592b18;
-    &:hover {
-      color: #fff;
-      background-color: #592b18;
-    }
+    @include btn($brown, $white);
   }
   &.btn--gold {
-    color: #d9aa8a;
-    border-color: #d9aa8a;
-    &:hover {
-      color: #fff;
-      background-color: #d9aa8a;
-    }
+    @include btn($gold, $white);
   }
   &.btn--white {
-    color: #fff;
-    border-color: #fff;
-    &:hover {
-      color: #333;
-      background-color: #fff;
-    }
+    @include btn($white, $black);
+  }
+  &.btn--summer-blue {
+    @include btn($summer-blue, $white);
   }
 }
 
