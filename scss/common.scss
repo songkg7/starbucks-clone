@@ -4,6 +4,7 @@ $white: #fff;
 $brown: #592b18;
 $gold: #d9aa8a;
 $black: #333;
+$indonesia-green: #1b4728;
 
 /* COMMON */
 body {
@@ -83,6 +84,9 @@ a {
   }
   &.btn--summer-blue {
     @include btn($summer-blue, $white);
+  }
+  &.btn--green {
+    @include btn($indonesia-green, $white);
   }
 }
 

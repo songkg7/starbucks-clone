@@ -59,12 +59,12 @@
 /* ScrollMagic */
 .back-to-position {
   opacity: 0;
-  transition: 1s;
+  transition: 2s;
   &.to-right {
-    transform: translateX(-150px);
+    transform: translateX(-500px);
   }
   &.to-left {
-    transform: translateX(150px);
+    transform: translateX(500px);
   }
 }
 
@@ -401,9 +401,19 @@
 
 /* SEASON PRODUCT */
 .season-product {
-  background-image: url("../images/spring/season_product_bg.jpg");
+  background-image: url("../images/summer/2021_summer3_bean_bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 573px;
+  background-position: center;
   .inner {
-    height: 400px;
+    // height: 400px;
+    .product {
+      position: absolute;
+      // vertical-align: top;
+      top: 70px;
+      left: 20%;
+    }
   }
   .floating3 {
     position: absolute;
@@ -412,10 +422,10 @@
   }
   .text-group {
     position: absolute;
-    top: 110px;
+    top: 120px;
     right: 100px;
     .title {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
     .description {
       margin-bottom: 15px;
