@@ -7,3 +7,8 @@
 [DEMO](https://happy-pike-856a4b.netlify.app/)
 
 [Notion](https://accidental-clematis-b07.notion.site/Starbucks-clone-fda89493b0864961b727e60c2b6ff602)
+
+## Skills
+- HTML
+- SCSS
+- JS
